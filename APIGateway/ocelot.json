@@ -1,0 +1,52 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/categorias",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "produtosapp-sergio.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/categorias",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/produtos",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "produtosapp-sergio.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/produtos",
+      "UpstreamHttpMethod": [ "POST", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/produtos/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "produtosapp-sergio.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/produtos/{id}",
+      "UpstreamHttpMethod": [ "PUT", "DELETE", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/historicos",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "historicosapp-sergio.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/historicos",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ]
+}
